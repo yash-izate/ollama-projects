@@ -42,8 +42,19 @@ st.radio("Pick one",["Option A", "Option B"])
 st.checkbox("I agree all terms & conditions.")
 
 #check conditions
-option = st.radio("choose view", ["show charts", "show table"])
+option = st.radio("choose view", ["show chart", "show table"])
 if option == "show chart":
-    st.write("char would be appear here")
+    st.write("chart would be appear here")
 else:
     st.write("table would be appear here")
+
+# creating a form
+with st.form("Login Form"):
+    username = st.text_input("Enter Username: ")
+    password = st.text_input("Password",type="password")
+    submitted = st.form_submit_button("Login")
+
+    if submitted:
+        st.success(f"Welcome {username}!")
+    else:
+        st.error(f"Form not submitted")
