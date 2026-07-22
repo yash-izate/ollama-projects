@@ -40,3 +40,10 @@ st.selectbox("Select a fruit", ["Apple", "Orange", "Mango"])
 st.multiselect("Choose toppings", ["Cheese","Tomato", "Olives"])
 st.radio("Pick one",["Option A", "Option B"])
 st.checkbox("I agree all terms & conditions.")
+
+#check conditions
+option = st.radio("choose view", ["show charts", "show table"])
+if option == "show chart":
+    st.write("char would be appear here")
+else:
+    st.write("table would be appear here")
